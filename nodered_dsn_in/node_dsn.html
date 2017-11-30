@@ -1,0 +1,83 @@
+<script type="text/javascript">
+    RED.nodes.registerType('node-dsn',{
+       
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+                name: {value:""},
+                host: {
+                    value: "http://localhost",
+                    required: true
+                },
+                port: {
+                    value: "",
+                    required: false,
+                    validate: RED.validators.number()
+                },
+                /*server: {
+                    value:"",
+                    type:"node-dsn-config"
+                },*/
+        },
+        
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"dsn";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="node-dsn">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-host"><i class="fa fa-globe"></i> Host</label>
+        <input type="text" id="node-input-host">
+      </div>
+      <div class="form-row">
+        <label for="node-input-port"><i class="fa fa-server"></i> Port</label>
+        <input type="text" id="node-input-port">
+      </div>
+</script>
+
+<script type="text/x-red" data-help-name="node-dsn">
+    <p>A simple node that converts the message payloads into all lower-case characters</p>
+</script>
+
+
+<!--<script type="text/javascript">
+    RED.nodes.registerType('node-dsn-config',{
+        category: 'config',
+        defaults: {
+            host: {
+                value:"http://localhost",
+                required:true
+            },
+            port: {
+                value:4040,
+                required:true,
+                validate:RED.validators.number()
+            },
+        },
+        inputs:0,
+        outputs:0,
+        label: function() {
+            return this.host+":"+this.port;
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="node-dsn-config">
+    <div class="form-row">
+        <label for="node-config-input-host"><i class="icon-bookmark"></i> Host</label>
+        <input type="text" id="node-config-input-host">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-port"><i class="icon-bookmark"></i> Port</label>
+        <input type="text" id="node-config-input-port">
+    </div>
+</script>-->

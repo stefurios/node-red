@@ -1,0 +1,20 @@
+{
+  "name": "node-red-dsn",
+  "version": "1.0.0",
+  "description": "node for communication throw dsn and device",
+  "main": "node_dsn.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "socket.io-client": "2.0.4",
+    "jsonwebtoken": "8.1.0"
+  },
+  "author": "stefano",
+  "license": "ISC",
+  "node-red" : {
+    "nodes": {
+        "node-dsn": "node_dsn.js"
+    }
+  }
+}
