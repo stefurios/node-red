@@ -3,7 +3,7 @@
     "updated_at": "2016-08-05T18:37:50.673Z",
     "modules": [
         {
-            "id": "node-red-contrib-ftp-env",
+            "id": "node-red-contrib-ftp-env-prova",
             "version": "1.3.0",
             "description": "A node-red node that support FTP file transfer using $() environment variables to control the ftp connection details",
             "keywords": [
